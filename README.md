@@ -35,10 +35,10 @@ For a dockerized BOINC client, see the `docker-boinc` repository.
 ### General Usage
 
     docker run                              \
-    	   --rm                             \
-	   laurentmalvert/boinccmd          \
-	       --host <HOST>                \
-	       [<BOINCCMD_ARGS>]
+           --rm                             \
+           laurentmalvert/boinccmd          \
+               --host <HOST>                \
+               [<BOINCCMD_ARGS>]
 
 ### Controlling a Dockerized BOINC Client
 
@@ -47,28 +47,28 @@ provided by the `docker-boinc` repo, and that you gave its container
 the name `boinc`, you can control is using:
 
     docker run                      \
-    	   --rm                     \
-	   --link boinc:boinc       \
-	   laurentmalvert/boinccmd  \
-	       --host boinc         \
-	       [<BOINCCMD_ARGS>]
+           --rm                     \
+           --link boinc:boinc       \
+           laurentmalvert/boinccmd  \
+               --host boinc         \
+               [<BOINCCMD_ARGS>]
 
 #### Examples
 
     # get current state
     docker run                      \
-    	   --rm                     \
-	   --link boinc:boinc       \
-	   laurentmalvert/boinccmd  \
-	       --host boinc         \
-	       --get_state
+           --rm                     \
+           --link boinc:boinc       \
+           laurentmalvert/boinccmd  \
+               --host boinc         \
+               --get_state
 
     # join account manager
     docker run                      \
-    	   --rm                     \
-	   --link boinc:boinc       \
-	   laurentmalvert/boinccmd  \
-	       --host boinc         \
+           --rm                     \
+           --link boinc:boinc       \
+           laurentmalvert/boinccmd  \
+               --host boinc         \
                --join_acct_mgr <URL> <LOGIN> <PASS>
 
 ## Possible Improvements ?
