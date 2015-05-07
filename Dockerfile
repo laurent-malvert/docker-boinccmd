@@ -1,4 +1,4 @@
-FROM laurentmalvert/boinc:latest
+FROM laurentmalvert/docker-boinc:latest
 
 MAINTAINER Laurent Malvert <laurent.malvert@gmail.com>
 
