@@ -1,4 +1,4 @@
-FROM boinc/boinc
+FROM laurentmalvert/boinc:latest
 
 MAINTAINER Laurent Malvert <laurent.malvert@gmail.com>
 
