@@ -1,13 +1,13 @@
-FROM laurentmalvert/docker-boinc:latest
+FROM laurentmalvert/docker-boinc:jessie
 
 MAINTAINER Laurent Malvert <laurent.malvert@gmail.com>
 
 LABEL                                                                          \
     Vendor="Laurent Malvert"                                                   \
     Description="A base container image providing boinccmd to control clients" \
-    Version="wheezy_7.0.27"                                                    \
-    Boinc-Version="7.0.27"                                                     \
-    Base-Version="debian:wheezy"
+    Version="jessie_7.4.23"                                                    \
+    Boinc-Version="7.4.23"                                                     \
+    Base-Version="debian:jessie"
 
 # -- BOINC ---------------------------------------------------------------
 
