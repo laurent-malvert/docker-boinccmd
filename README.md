@@ -24,7 +24,7 @@ For a dockerized BOINC client, see the `docker-boinc` repository.
 
 ## Pull From DockerHub
 
-    docker pull laurentmalvert/boinccmd
+    docker pull laurentmalvert/docker-boinccmd
 
 ## Build It Yourself
 
@@ -32,11 +32,14 @@ For a dockerized BOINC client, see the `docker-boinc` repository.
 
 ## Usage
 
+For information on the `boinccmd` itself, read its [documentation][1]
+at the BOINC wiki.
+
 ### General Usage
 
     docker run                              \
            --rm                             \
-           laurentmalvert/boinccmd          \
+           laurentmalvert/docker-boinccmd   \
                --host <HOST>                \
                [<BOINCCMD_ARGS>]
 
@@ -46,29 +49,29 @@ Assuming you are using a dockerized BOINC client, like the one
 provided by the `docker-boinc` repo, and that you gave its container
 the name `boinc`, you can control is using:
 
-    docker run                      \
-           --rm                     \
-           --link boinc:boinc       \
-           laurentmalvert/boinccmd  \
-               --host boinc         \
+    docker run                             \
+           --rm                            \
+           --link boinc:boinc              \
+           laurentmalvert/docker-boinccmd  \
+               --host boinc                \
                [<BOINCCMD_ARGS>]
 
 #### Examples
 
     # get current state
-    docker run                      \
-           --rm                     \
-           --link boinc:boinc       \
-           laurentmalvert/boinccmd  \
-               --host boinc         \
+    docker run                             \
+           --rm                            \
+           --link boinc:boinc              \
+           laurentmalvert/docker-boinccmd  \
+               --host boinc                \
                --get_state
 
     # join account manager
-    docker run                      \
-           --rm                     \
-           --link boinc:boinc       \
-           laurentmalvert/boinccmd  \
-               --host boinc         \
+    docker run                             \
+           --rm                            \
+           --link boinc:boinc              \
+           laurentmalvert/docker-boinccmd  \
+               --host boinc                \
                --join_acct_mgr <URL> <LOGIN> <PASS>
 
 ## Possible Improvements ?
@@ -77,3 +80,7 @@ the name `boinc`, you can control is using:
  * Provide some preset startup scripts.
  * `boinccmd` image unnecessarily installs the whole of boinc, when it
    only requires parts of it.
+
+
+
+[1]: http://boinc.berkeley.edu/wiki/Boinccmd_tool
